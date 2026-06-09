@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cc-test-title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="content">
+            <div class="container">
+            <div class="sidebar">
+                <p style="margin-bottom:0;">welcome to...</p>
+                <h1 style="margin-top:0.5rem;">clicker cookie</h1>
+
+                <div class="buttons">
+                    <p id="buttonNewGame">new game</p>
+                    <p id="buttonLoadGame">load game</p>
+                    <p id="buttonMods">mods</p>
+                    <p id="buttonSettings">settings</p>
+                </div>
+            </div>
+            <div class="button-content">
+                <div id="bttnContentNone" style="display: block;"> <!-- default display is none -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg/250px-Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg" alt="temp">
+                </div>
+                <div id="bttnContentNewGame">
+                    <label for="saveNameInput">Save Name:</label>
+                    <input type="text" name="saveNameInput" id="saveNameInput" placeholder="Super Epic Fun Bakery!">
+                    <button id="startNewGame" class="bottom-right-button">Begin</button> <!-- todo: style -->
+                </div>
+                <div id="bttnContentLoadGame">
+                    <h2>load game</h2>
+                </div>
+                <div id="bttnContentMods">
+                    <div class="mods-header">
+                        <h2>mods</h2>
+                        <button class="help-button">?</button>
+                    </div>
+                    <button class="bottom-right-button">+</button>
+                </div>
+                <div id="bttnContentSettings">
+                    <h2>settings</h2>
+                </div>
+            </div>
+        </div>
+        <div class="social-links">
+            <img src="GitHub_Invertocat_Black.svg" alt="GitHub link">
+        </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {
+    /* no selecting */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* no select for images */
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none; /* mobile-only */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 650px;
+    height: 400px;
+    background-color: #f0f0f0;
+    display: flex;
+    padding: 0.75rem;
+
+    .sidebar {
+        padding-right: 1rem; /* pushes border to the side */
+        border-right: 2px solid gray;
+        min-width: fit-content;
+
+        .buttons {
+            padding-left: 0.5rem;
+            font-style: italic;
+
+            > *:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .button-content {
+        padding: 1rem;
+        width: 100%;
+
+        > * {
+            display: none;
+            height: 100%;
+            position: relative; /* for absolute positioning of the bottom right buttons */
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+
+        .mods-header {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            button { /* todo: fully style this */
+                border-radius: 256px;
+                height: min-content;
+            }
+        }
+
+        .bottom-right-button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+.social-links {
+    width: fit-content;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    background-color: #d9d9d9;
+
+    > * {
+        /* padding: 20% 0; */
+        height: 80%;
+    }
+}
