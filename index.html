@@ -38,7 +38,7 @@
                         <h2>mods</h2>
                         <button class="help-button">?</button>
                     </div>
-                    <button class="bottom-right-button">+</button>
+                    <button id="addModButton" class="bottom-right-button">+</button>
                 </div>
                 <div id="bttnContentSettings">
                     <h2>settings</h2>
@@ -50,6 +50,42 @@
         </div>
         </div>
     </main>
+    <dialog id="dialogAddMod" class="dialog-add-mod">
+        <h2>Add Mod</h2>
+
+        <div class="add-methods">
+            <div style="border-right: 1px solid gray;">
+                <h3>From URL</h3>
+                <form onsubmit="return false;" id="addModURLForm" style="margin-top:22px;">
+                    <label for="addModURL" class="popup-text">From URL: </label>
+                    <input id="addModURL">
+                    <input type="submit" value="->">
+                </form>
+            </div>
+            <div>
+                <h3>From File</h3>
+                <form>
+                    <label for="addModFile" class="popup-text" style="margin-right:0px;">From File: </label>
+                    <input type="file" id="addModFile" accept=".js" class="popup-text" style="width:86px;">
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom-container">
+            <div class="mod-data-preview">
+                <img src="https://cdn.modrinth.com/data/AANobbMI/295862f4724dc3f78df3447ad6072b2dcd3ef0c9_96.webp" alt="mod icon">
+                <div class="mod-text-container">
+                    <h3>Sodium</h3>
+                    <p class="desc">A high-performance rendering engine replacement for Clicker Cookie, which greatly improves frame rates and reduces micro-stutter.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button id="exitDialogAddModButton">Exit</button>
+            <button>Add</button>
+        </div>
+    </dialog>
     <script src="./main.js"></script>
 </body>
 </html>

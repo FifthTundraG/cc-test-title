@@ -13,6 +13,9 @@ const buttons = {
     settings: document.getElementById("buttonSettings")
 }
 
+// dialogs
+const addModDialog = document.getElementById("dialogAddMod");
+
 function sidebarButtonPressed(button, content) {
     for (const buttonName in buttons) {
         buttons[buttonName].style.fontWeight = "normal";
@@ -38,4 +41,12 @@ document.getElementById("buttonMods").addEventListener("click", () => {
 });
 document.getElementById("buttonSettings").addEventListener("click", () => {
     sidebarButtonPressed(document.getElementById("buttonSettings"), buttonContents.settings);
+});
+
+// --- mods ---
+document.getElementById("addModButton").addEventListener("click", () => {
+    addModDialog.showModal();
+});
+document.getElementById("exitDialogAddModButton").addEventListener("click", () => {
+    addModDialog.close();
 });
