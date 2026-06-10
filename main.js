@@ -43,6 +43,20 @@ document.getElementById("buttonSettings").addEventListener("click", () => {
     sidebarButtonPressed(document.getElementById("buttonSettings"), buttonContents.settings);
 });
 
+// save name input stuff
+const possibleSaveNameInputPlaceholders = [
+    "Super Epic Fun Bakery!",
+    "My Awesome Cookie Bakery",
+    "My World",
+    "a",
+    "<NAME>'s Bakery",
+    "Best Bakery Ever",
+    "Bakery: Now With More Chocolate!",
+    "My Singing Cookies",
+    "Cookie Clicker"
+];
+document.getElementById("saveNameInput").placeholder = possibleSaveNameInputPlaceholders[Math.floor(Math.random() * possibleSaveNameInputPlaceholders.length)];
+
 // --- mods ---
 document.getElementById("addModButton").addEventListener("click", () => {
     addModDialog.showModal();
